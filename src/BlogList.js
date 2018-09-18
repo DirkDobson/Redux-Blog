@@ -10,6 +10,8 @@ const filtered = (blogs, filter) => {
       return blogs.filter( t => !t.complete )
     case 'Completed':
       return blogs.filter( t => t.complete )
+    default:
+      return blogs
   }
 }
 

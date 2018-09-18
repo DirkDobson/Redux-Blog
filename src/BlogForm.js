@@ -24,18 +24,19 @@ class BlogForm extends React.Component {
 
   handleChange = (e) => {
     this.setState({ name: e.target.value})
-    this.setState({ text: e.target.value})
+    //this.setState({ text: e.target.value})
   }
   render() {
-    const { name, text } = this.state
+    const { name, 
+      //text 
+    } = this.state
 
 
     return(
       <div>
         <h3>Add a Blog</h3>
         <form onSubmit={this.handleSubmit}>
-        <input value={name}{...text} onChange={this.handleChange} />
-        <input value={text} onChange={this.handleChange} />
+        <input value={name} onChange={this.handleChange} required />
         <button>Submit Blog</button>
         </form>
       </div>
